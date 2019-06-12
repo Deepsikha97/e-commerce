@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'cart',
     'orders',
     'bootstrap4',
-    'django_dropbox_storage',
+    
 ]
 
 MIDDLEWARE = [
@@ -144,15 +144,15 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-DROPBOX_FILE_UPLOAD_FOLDER = MEDIA_URL
-DROPBOX_ACCESS_TYPE = "dropbox"
+#DROPBOX_FILE_UPLOAD_FOLDER = MEDIA_URL
+#DROPBOX_ACCESS_TYPE = "dropbox"
 CART_SESSION_ID = 'cart'
 
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 DROPBOX_APP_KEY = "uc0qgtkr25pu3cc"
 DROPBOX_APP_SECRET_KEY = "0qbvyz1hyzse6xp"
 DROPBOX_APP_ACCESS_TOKEN = "5mtYlUtjgcAAAAAAAAAAChW85Ee1iuAzIxGYIKXBLBR4umBE3Ga1tvyhAsXKJdYS"
