@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'cart.context_processors.cart',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -143,7 +144,7 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #DROPBOX_FILE_UPLOAD_FOLDER = MEDIA_URL
 #DROPBOX_ACCESS_TYPE = "dropbox"
 CART_SESSION_ID = 'cart'
@@ -151,13 +152,12 @@ CART_SESSION_ID = 'cart'
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-FILE_UPLOAD_HANDLERS = (
-    "shop.dropbox_upload_handler.DropboxFileUploadHandler",
-)
+# FILE_UPLOAD_HANDLERS = (
+#     "shop.dropbox_upload_handler.DropboxFileUploadHandler",
+# )
 
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 DROPBOX_APP_KEY = "uc0qgtkr25pu3cc"
 DROPBOX_APP_SECRET_KEY = "0qbvyz1hyzse6xp"
-DROPBOX_APP_ACCESS_TOKEN = "5mtYlUtjgcAAAAAAAAAAChW85Ee1iuAzIxGYIKXBLBR4umBE3Ga1tvyhAsXKJdYS"
-DROPBOX_OAUTH2_TOKEN = DROPBOX_APP_ACCESS_TOKEN
-DROPBOX_ROOT_FOLDER = MEDIA_ROOT
+DROPBOX_APP_ACCESS_TOKEN = DROPBOX_OAUTH2_TOKEN = "5mtYlUtjgcAAAAAAAAAAChW85Ee1iuAzIxGYIKXBLBR4umBE3Ga1tvyhAsXKJdYS"
+DROPBOX_ROOT_PATH = '/media/'
