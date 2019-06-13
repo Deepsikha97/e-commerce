@@ -151,6 +151,9 @@ CART_SESSION_ID = 'cart'
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+FILE_UPLOAD_HANDLERS = (
+    "shop.dropbox_upload_handler.DropboxFileUploadHandler",
+)
 
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 DROPBOX_APP_KEY = "uc0qgtkr25pu3cc"
