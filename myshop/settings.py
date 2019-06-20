@@ -156,4 +156,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = '<path to your json private key file>'
 
 
-GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE ='/json.json'
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE ='json'
