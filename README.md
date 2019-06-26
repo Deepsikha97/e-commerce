@@ -1,1 +1,1 @@
-This is simple e commerce project.
+This is simple e commerce project done on django.
