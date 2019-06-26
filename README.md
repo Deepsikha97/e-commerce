@@ -1,1 +1,1 @@
-# e-commerce
+This is simple e commerce project.
